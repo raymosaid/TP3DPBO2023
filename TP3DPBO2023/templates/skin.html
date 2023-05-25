@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta nama="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mc Donald's</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style-type: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navbar CSS */
+        #navbar {
+            background-color: #ef3e42;
+            color: white;
+        }
+
+        #navbar .nav-item :hover {
+            border-bottom: 3px solid white;
+            color: white;
+        }
+
+        .nav-item{
+            margin: 0px 3px 0px 3px
+        }
+
+        .nav-link{
+            color: white;
+            font-size: 16px;
+        }
+
+        #btn-search{
+            color: white;
+            border-color: white;
+        }
+
+        /* Body CSS */
+        .row h3{
+            margin-top: -50px;
+        }
+
+        #food .card {
+            width: 250px;
+        }
+
+        #food .row a {
+            text-decoration: none;
+        }
+
+        .card img {
+            width: 150px;
+        }
+
+        .food-thumbnail .name-food {
+            color: #055160;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .food-thumbnail .subcategory-food {
+            color: #0AA2C0;
+            font-size: 14px;
+        }
+
+        .food-thumbnail .desc-food {
+            color: #EFBC6B;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        #footer a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.php">
+                <img src="assets/images/logo.png" alt="Logo" height="60" class="d-inline-block align-text-top">
+          </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="foodUpload.php">Upload Makanan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Upload Minuman</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="subCategory.php">Sub-Kategori Makanan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sub-Kategori Minuman</a>
+                </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" id="btn-search">Search</button>
+                </form>
+        </div>
+      </nav>
+    
+    <div class="container mt-5 py-3">
+        <div class="row mt-3" id="food">
+            <div class="row">
+                <h3>Daftar Makanan</h3>
+            </div>
+            <div class="row">
+                <!--'<div class="col gx-2 gy-3 justify-content-center">' .
+                    '<div class="card pt-4 px-2 food-thumbnail">
+                        <a href="detail.php?id=' . $row['id_food'] . '">
+                            <div class="row justify-content-center">
+                                <img src="assets/images/' . $row['pict_food'] . '" class="card-img-top" alt="' . $row['pict_food'] . '">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text name-food my-0">' . $row['name_food'] . '</p>
+                                <p class="card-text subcatedory-food">' . $row['id_subcategory_food'] . '</p>
+                                <p class="card-text desc-food my-0">' . $row['desc_food'] . '</p>
+                                <p class="card-text price-food my-0">' . $row['price_food'] . '</p>
+                            </div>
+                        </a>
+                    </div>    
+                </div>'-->
+                DATA_MAKANAN
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 py-3 bg-info text-white" id="footer">
+        <div class="container-fluid">
+            <div class="row justify-content-center text-center">
+                <p class="my-0">&copy; 2022 Copyright by <a href="https://github.com/raymosaid" target="_blank">Ray Mosaid</a> &#9475; Powered by <a href="https://getbootstrap.com/" target="_blank">Bootstrap.com</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
